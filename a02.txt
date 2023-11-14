@@ -1,0 +1,42 @@
+#1.7
+    (a) ?: 4 * (x + 2) + y
+        E: 4 * z + y
+
+    (b) ?: x + 5 * w
+        E: x + z * w
+
+    (c) ?: 3 * y + 3 * y
+        E: 3 * z + 3 * z
+    
+    (d) ?: y + y
+        E: z + z
+
+    (e) ?: (y + 1) * x + (y + 1) * y
+        E: z * x + z * y
+
+#1.8
+    (a) b + c + y + w
+
+    (b) x + (b * c)
+
+    (c) x * (y + x)
+
+    (d) (x + y) * (x * y)
+
+    (e) (y + x) * q * (y + x)
+
+#1.9
+    (a) hint:   x + y = y + x
+        E:      (x +y) * z
+    
+    (b) hint:   x + y = y + x
+        E:      z * z
+
+    (c) hint:   y + w = y * w
+        E:      x + z + x
+    
+    (d) hint:   x = y + w
+        E:      z * y * x
+
+    (e) hint:   x * y = y * x
+        E:      z * x 
