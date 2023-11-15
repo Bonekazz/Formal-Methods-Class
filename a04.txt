@@ -1,0 +1,63 @@
+#2.3
+    (d) b ∨ (c ∧ d)
+
+        b	c	d	|   (c ∧ d)   |   b ∨ (c ∧ d)
+    -------------------------------------------------
+        T	T	T   |      T      |       T
+        T	T	F   |      F      |       T
+        T	F	T   |      F      |       T 
+        T	F	F   |      F      |       T
+        F	T	T   |      T      |       T
+        F	T	F   |      F      |       F
+        F	F	T   |      F      |       F 
+        F	F	F   |      F      |       F
+
+    (e) ¬false => b ∨ c
+
+        b	c   |    b ∨ c    |   ¬false => b ∨ c
+    ------------------------------------------------
+        T	T	|      T      |         T
+        T	F	|      T      |         T 
+        F	T	|      T      |         T  
+        F	F	|      F      |         F 
+
+    (h) (b ≡ c) ≡ (b => c) ∧ (c => b)
+    
+        b	c   |    b ≡ c    |   (b => c)  |   (c => b)   |   (b => c) ∧ (c => b)  |  (b ≡ c) ≡ (b => c) ∧ (c => b)
+    -------------------------------------------------------------------------------------------------------------------
+        T	T	|      T      |      T      |      T       |            T           |             T
+        T	F	|      F      |      F      |      T       |            F           |             T
+        F	T	|      F      |      T      |      F       |            F           |             T
+        F	F	|      T      |      F      |      F       |            F           |             F
+    
+
+#2.4
+    (b) p ∨ p !≡ p
+    
+    (d) p !<= q !≡ ¬p ∧ q
+
+    (f) true !<= p !≡ false
+
+#2.5
+    (d) "Whether or not it's rainning, I'm going swimming.
+
+        s: "I'm going to swimming"
+        r: "it's rainning
+
+        (r ∨ ¬r) => i
+
+    (e) "If it rains cats and dogs I'll eat my hat, but I won't go swimming"
+
+        eh: I'll eat my hat
+        sc: it's rainning cats
+        sd: it's rainning dogs
+        s: I'll go swimming
+
+        (sc ∧ sd) => (e ∧ ¬s)
+        (¬e ∧ s) => ¬(sc ∧ sd)
+
+    (h) "
+
+#2.7
+
+#extra
