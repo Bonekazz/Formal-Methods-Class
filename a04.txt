@@ -39,25 +39,60 @@
     (f) true !<= p !≡ false
 
 #2.5
-    (d) "Whether or not it's rainning, I'm going swimming.
-
-        s: "I'm going to swimming"
-        r: "it's rainning
-
-        (r ∨ ¬r) => i
-
-    (e) "If it rains cats and dogs I'll eat my hat, but I won't go swimming"
-
         eh: I'll eat my hat
         sc: it's rainning cats
         sd: it's rainning dogs
-        s: I'll go swimming
+        s: I'm going to swimming
+        r: "it's rainning
 
-        (sc ∧ sd) => (e ∧ ¬s)
-        (¬e ∧ s) => ¬(sc ∧ sd)
+    (a) "Whether or not it's rainning, I'm going swimming.
 
-    (h) "
+        (r ∨ ¬r) => i
+    
+    (b) "If it's rainning I'm not going to swimming"
+
+        s => ¬r
+
+    (c) "It's rainning cats and dogs"
+
+        (sc ∧ sd) ≡ true
+
+    (d) "I's rainning cats or dogs"
+
+        (sc ∨ sd) ≡ true
+    
+    (e) "If it rains cats and dogs I'll eat my hat, but I won't go swimming"
+
+        (sc ∧ sd) => (eh ∧ ¬s)
+
+    (f) "If it rains cats and dogs while I am going swimming, I'll eat my hat"
+
+        ((sc ∧ sd) ∧ s) => eh
 
 #2.7
+    xly: x < y,
+    xey: x = y,
+    xgy: x > y,
+    ylz: y < z,
+    ygz: y > z,
+    vew: v = w,
+    ¬xly: x ≥ y,
+    ep: “Execution of P is begun with x < y,”
+    ty: “Execution of P terminates with y = 2**x,”
+    ep1: “Execution of P is begun with x < 0,”
+    ept: “Execution of P terminates.”
+
+    (a) xly ∨ xey
+    (b) xly ∨ xey ∨ xgy
+    (c) (xgy ∧ ygz) => vew
+    (d) (xly ∧ ylz ∧ vew) ≡ true
+    (e) (xly ∨ ylz ∨ vew) ≡ true
+    (f) (xly ∧ ylz ∧ vew) ≡ false
+    (g) ((¬ylz ∧ vew) => xly) ∧ ((¬xly ∧ ¬vew) => ylz) ∧ ((¬xly ∧ ¬ylz) => vew) 
+    (h) (xly => ylz) ∧ (¬xly => vew)
+    (i) ((xly => ylz) ≡ vew) ∧ (¬xly => (ygz ≡ false)) ∧ (vew => xly)
+    (j) (ep => ty)
+    (k) ep1 => ¬ept
+
 
 #extra
