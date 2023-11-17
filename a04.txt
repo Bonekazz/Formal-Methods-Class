@@ -96,3 +96,16 @@
 
 
 #extra
+    xgy: x > y
+    ylz: y < z 
+
+    (a) ylz => xgy 
+    (b) (xgy => ylz) ∧ (ylz => xgy)
+    (c) xgy => ylz 
+    (d) (xgy => ylz) ∧ (ylz => xgy)
+    (e) xgy => ylz
+    (f) ylz => xgy
+    (g) xgy ≡ ylz 
+    (i) ylz => xgy
+    (j) ¬ylz => xgy
+    (k) ylz => xgy
