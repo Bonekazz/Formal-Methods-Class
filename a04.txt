@@ -85,10 +85,10 @@
     (a) xly ∨ xey
     (b) xly ∨ xey ∨ xgy
     (c) (xgy ∧ ygz) => vew
-    (d) (xly ∧ ylz ∧ vew) ≡ true
-    (e) (xly ∨ ylz ∨ vew) ≡ true
+    (d) xly ∧ ylz ∧ vew
+    (e) xly ∨ ylz ∨ vew
     (f) (xly ∧ ylz ∧ vew) ≡ false
-    (g) ((¬ylz ∧ vew) => xly) ∧ ((¬xly ∧ ¬vew) => ylz) ∧ ((¬xly ∧ ¬ylz) => vew) 
+    (g) (xly ∧ vew ∧ ylz) ≡ false
     (h) (xly => ylz) ∧ (¬xly => vew)
     (i) ((xly => ylz) ≡ vew) ∧ (¬xly => (ygz ≡ false)) ∧ (vew => xly)
     (j) (ep => ty)
