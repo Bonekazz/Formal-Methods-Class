@@ -87,8 +87,8 @@
     (c) (xgy ∧ ygz) => vew
     (d) xly ∧ ylz ∧ vew
     (e) xly ∨ ylz ∨ vew
-    (f) (xly ∧ ylz ∧ vew) ≡ false
-    (g) (xly ∧ vew ∧ ylz) ≡ false
+    (f) ¬xly ∨ ¬ylz ∨ ¬vew
+    (g) ¬(xly ∧ vew ∧ ylz)
     (h) (xly => ylz) ∧ (¬xly => vew)
     (i) ((xly => ylz) ≡ vew) ∧ (¬xly => (ygz ≡ false)) ∧ (vew => xly)
     (j) (ep => ty)
