@@ -1,0 +1,29 @@
+#1      ¬¬p ≡ p
+    =       <(3.9), with q:= p>
+        ¬(¬(p ≡ p))
+    =       <(3.3)>
+        ¬(¬true)
+    =       <(3.8)>
+        ¬false //
+
+#2      ¬false ≡ true
+    =       <(3.9), with p,q := false, true>
+        ~(false == true)
+    =       <(3.9), with p,q := true, false; symetry omitted>
+        ~true == false // (3.8)
+
+#3      (p !== q) == ~p == q
+    =               <(3.9)>
+        (p !== q) == ~(p == q) // (3.10)
+
+#4      p !== q == r    (using the left hand side of (p !== q == r) == (p == q !== r))
+    =           <(3.10)>
+        ~(p == q) == r 
+    =           <(3.9), omitted (3.2)>
+        ~q == p == r 
+    =           <(3.2)>
+        p == ~p == r 
+    =           <(3.9)>              
+        p == ~(q == r) 
+    =           <(3.10)>
+        p == q !== r //
