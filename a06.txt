@@ -19,7 +19,7 @@
             =               {(3.5)}
                 p   // 
 
-    (3.36):     p ^ q == q & p
+    (3.36):     p & q == q & p
             =               {(3.35)}
                 p == q == p V q
             =               {(3.2)}
@@ -27,12 +27,36 @@
             =               {(3.24)}
                 q == p == q V p
             =               {(3.35)}
-                q ^ p //
+                q & p //
 
-    (3.38):     p ^ p == p
+    (3.38):     p & p == p
             =               {(3.35), with q := p}
                 p == p V p
             =               {(3.26)}
                 p == p
             =               {(3.3)}
                 true    //
+
+    (3.47a)     ~(p & q)
+            =               {(3.35)}
+                ~(p == q == p V q)
+            =               {(3.9)}
+                ~p == q == p V q
+            =               {(3.32), with p,q := q,p}
+                ~p == q == q V ~p == q
+            =               {(3.3) with symmetry}
+                ~p == q V ~p == true
+            =               {(3.32), with p,q := ~p, q}
+                ~p == ~p V ~q == ~p
+            =               {(3.3) with symmetry and identity of ==}
+                ~p V ~q //
+
+    (3.47b)     ~(p V q)
+            =               {(3.32)}
+                ~(p V ~q == p)
+            =               {(3.32)}
+                ~(~q V ~p == ~q == p)
+            =               {(3.9), with symmetry and idempotency of V}
+                ~p == ~q == ~p V ~q
+            =               {(3.35), with p,q := ~p,~q}
+                ~p & ~q //
