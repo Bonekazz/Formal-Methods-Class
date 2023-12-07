@@ -4,4 +4,4 @@
             :hint: previous theorems can be replaced with any expression
 ------------------------------------------------------------------------------
 
-    [ ] - assignment 07
+    [X] - assignment 07

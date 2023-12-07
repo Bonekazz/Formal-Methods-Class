@@ -44,5 +44,31 @@
         =               {(3.57), with p.q := (p V q), true}
             (p V q) V true => true
         =               {(3.29)}
-            true //
+            true => true
+        =               {(3.57)}
+            true V true == true // (3.29) Zero of V
+       
+(3.71)      p => p 
+        =               {(3.57) with q := p}
+            p V p == p // (3.26) Idempotency of V
+
+(3.72)      p => true == true
+        =               {(3.57) with q := true}
+            p V true == true // (3.29) Zero of V
+
+(3.76a)     p => p V q
+        =               {3.57)}
+            p V (p V q) == p V q
+        =               {(3.31)}
+            (p V p) V (p V q) == p V q
+        =               {(3.26)}
+            true V (p V q) == p V q
+        =               {(3.29) with p := (p V q)}
+            true == p V q // (3.3)
+
+(3.77)      p & (p => q) => q
+        =               {(3.66)}
+            p & q => q 
+        =               {(3.57)}
+            (p & q) V q == q // (3.30) with false := (p & q)
 
