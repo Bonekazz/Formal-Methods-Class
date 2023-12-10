@@ -1,23 +1,23 @@
-(3.61)      p => q == ~q => ~p
+(3.61)                      p => q == ~q => ~p
 
-    proof:  ~q => ~p
-        =               {(3.59)}
-            ~~q V ~p
-        =               {(3.12)}
-            q V ~p
-        =               {(3.59), with symmetry}
-            p => q //
+        proof:              ~q => ~p
+                        =               {(3.59)}
+                            ~~q V ~p
+                        =               {(3.12)}
+                            q V ~p
+                        =               {(3.59), with symmetry}
+                            p => q //
         
 
-(3.63)      p => (q == r)  == (p => q) == (p => r)
+(3.63)                      p => (q == r)  == (p => q) == (p => r)
 
-    proof:  p => (q == r)
-        =               {(3.62)}
-            p & q == p & r
-        =               {(3.60)}
-            p => q == p == p & r 
-        =               {(3.60) with q := r}
-            p => q == p => r // 
+        proof:              p => (q == r)
+                        =               {(3.62)}
+                            p & q == p & r
+                        =               {(3.60)}
+                            p => q == p == p & r 
+                        =               {(3.60) with q := r}
+                            p => q == p => r // 
 
 (3.65)  Prove Shunting:     p & q => r == p => (q => r)  
 
@@ -29,48 +29,68 @@
                         =               {(3.31)}
                             (~p V ~q) V (~p V r)
                         =               {(3.47a)}
-                            ~(p & q) V (~p V r)
-                        =               {(3.59) with ~p,q := ~(p & q), (~p V r)}
-                            (p & q) => (~p V r)
-                       
+                            ¬(p & q) V (~p V r)
+                        =               {(3.59)}
+                            p & q => (~p V r)
+                                (unfinished)
+                        
+                    
 
 
 
-(3.70)      p V q => p & q == p == q
-        =               {(3.60)}
-            p V q => p => q == q 
-        =               {(3.57)}
-            p V q => p V q == q == q
-        =               {(3.3)}
-            p V q => true
-        =               {(3.57), with p.q := (p V q), true}
-            (p V q) V true => true
-        =               {(3.29)}
-            true => true
-        =               {(3.57)}
-            true V true == true // (3.29) Zero of V
+(3.70)                      p V q => p & q == p == q
+
+        proof:              p V q => p & q
+                        =               {(3.59)}
+                            ~(p V q) V (p & q)
+                        =               {(3.47b)}
+                            (~p & ~q) V (p & q)
+                        =               {(3.52)}
+                            p == q //
        
-(3.71)      p => p 
-        =               {(3.57) with q := p}
-            p V p == p // (3.26) Idempotency of V
+(3.71)                      p => p 
 
-(3.72)      p => true == true
-        =               {(3.57) with q := true}
-            p V true == true // (3.29) Zero of V
+        proof:              p => p
+                        =               {(3.59)}
+                            ~p V p
+                        =               {(3.28)}
+                            true //         
 
-(3.76a)     p => p V q
-        =               {3.57)}
-            p V (p V q) == p V q
-        =               {(3.31)}
-            (p V p) V (p V q) == p V q
-        =               {(3.26)}
-            true V (p V q) == p V q
-        =               {(3.29) with p := (p V q)}
-            true == p V q // (3.3)
+(3.72)                      p => true == true
 
-(3.77)      p & (p => q) => q
-        =               {(3.66)}
-            p & q => q 
-        =               {(3.57)}
-            (p & q) V q == q // (3.30) with false := (p & q)
+        proof:              p => true
+                        =               {(3.59)}
+                            ~p V true
+                        =               {(3.29)}
+                            true //
+
+(3.76a)                     p => p V q
+
+        proof:              p => p V q
+                        =               {(3.59)}
+                            ~p V (p V q)
+                        =               {(3.31)}
+                            (~p V p) V (~p V q)
+                        =               {(3.28)}
+                            true V (~p V q)
+                        =               {(3.29) with p := (~p V q)}
+                            true //
+
+(3.77)                      p & (p => q) => q
+        
+        proof:              p & (p => q) => q
+                        =               {(3.66)}
+                            p & q => q
+                        =               {(3.59)}
+                            ~(p & q) V q
+                        =               {(3.47a)}
+                            (~p V ~q) V q
+                        =               {(3.31)}
+                            (q V ~q) V (q V ~p)
+                        =               {(3.28)}
+                            true V (q V ~p)
+                        =               {(3.29)}
+                            true //
+
+        
 
