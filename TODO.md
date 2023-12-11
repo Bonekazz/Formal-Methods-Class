@@ -1,4 +1,4 @@
-# TODO      :current lecture - 12 at 44:33
+# TODO      :current lecture - 13 at 00:0
 
     [X] - finish a06
             :hint: previous theorems can be replaced with any expression
