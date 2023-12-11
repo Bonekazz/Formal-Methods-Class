@@ -32,7 +32,17 @@
                             ¬(p & q) V (~p V r)
                         =               {(3.59)}
                             p & q => (~p V r)
-                                (unfinished)
+                        =               {(3.32)}
+                            p & q => r V p == r
+                        =               {(3.44b)
+                            p & q => r V (~r & p) == r
+                        =               {(3.45)}
+                            p & q => (r V ~r) & (r V p) == r
+                        =               {(3.28)}
+                            p & q => true & (r V p) == r
+                        =               {(3.46)}
+                            p & q => (true & r) V (true & p) == r
+                            (unfinished)
                         
                     
 
