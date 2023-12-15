@@ -1,0 +1,3 @@
+(3.85a)             p ⇒ E<z:=p> == p => E<z:=true>
+        
+        proof:            
