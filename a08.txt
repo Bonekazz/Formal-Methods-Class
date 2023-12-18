@@ -1,3 +1,11 @@
-(3.85a)             p ⇒ E<z:=p> == p => E<z:=true>
+(3.85a)                 p ⇒ E[z:=p] == p => E[z:=true]
         
-        proof:            
+        proof:          p => E[z:=true]
+                =                               {(3.3)}
+                        (p = true) => E[z:=true]
+                =                               {(3.84b)}
+                        (p = true) => E[z:=p]
+                =                               {(3.3)}
+                        p => E[z:=p] //                
+
+(3.85b)                 q ∧ p ⇒ E[z:=p] ≡ q ∧ p ⇒ E[z:=true]   
