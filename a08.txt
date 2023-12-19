@@ -9,3 +9,27 @@
                         p => E[z:=p] //                
 
 (3.85b)                 q ∧ p ⇒ E[z:=p] ≡ q ∧ p ⇒ E[z:=true]   
+
+        proof:          q & p => E[z:=true]
+                =                               {(3.3)}
+                        q & (p = true) => E[z:=true]
+                =                               {(3.84c)}
+                        q & (p = true) => E[z:=p]
+                =                               {(3.3)}
+                        q & p => E[z:=p] //
+
+(4.1)                   p => (q => p)
+        
+        proof:          p => (q => p)
+                =                               {(3.59)}
+                        p => (~q V p)
+                =                               {(3.59)}
+                        ~p V (~q V p)
+                =                               {(3.31)}
+                        (~p V ~q) V (~p V p)
+                =                               {(3.28)}
+                        (~p V ~q) V true
+                =                               {(3.29)}
+                        true //
+
+(4.3)                   (p ⇒ q) ⇒ (p ∧ r ⇒ q ∧ r)
