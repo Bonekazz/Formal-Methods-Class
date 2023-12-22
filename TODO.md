@@ -1,4 +1,4 @@
-# TODO      :current lecture - 16 at 42:57
+# TODO      :current lecture - 17 at 10:25
     [X] - assignment 06
 
     [X] - assignment 07
